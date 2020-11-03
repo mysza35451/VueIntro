@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <div id="app">
+      <h1>{{ title }}</h1>
+      <img v-bind:src="img" alt="" />
+      <p>{{subject}}</p>
+
+      <p>{{location}}</p>
+      <p>Price: {{price}}</p>
+      <p>Number of spaces: {{counter}}</p>
+      <button v-on:click="if(counter > 0){counter -= 1}">Add to cart</button>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+
+        data: {
+          title: "After School Club",
+          subject: "Math",
+          location: "London",
+          price: "100.00",
+          img: "tpb.jpg",
+          counter: 5,
+        },
+      });
+    </script>
+  </body>
+</html>
